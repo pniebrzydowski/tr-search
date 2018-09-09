@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Currency from '../modules/Currency';
@@ -34,7 +34,7 @@ const Duration = styled.div`
   line-height: 1;
 `;
 
-class TourSidebar extends Component {
+class TourSidebar extends PureComponent {
   render() {
     const { currency, saving, price, length } = this.props;
     return (
