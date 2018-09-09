@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -22,7 +22,7 @@ const PhotosContainer = styled.div`
   }
 `;
 
-class TourPhotos extends Component {
+class TourPhotos extends PureComponent {
   render() {
     const { tour_image, map_image } = this.props;
     return (
