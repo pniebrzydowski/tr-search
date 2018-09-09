@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const InfoContainer = styled.div`
+  padding: 20px;
+
+  h1 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+  }
+  table {
+    margin-top: 12px;
+  }
+  th, td {
+    font-size: 10px;
+    text-align: left;
+  }
+  th {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #818d99;
+    width: 100px; 
+  }
+`;
 
 class TourInfo extends Component {
   render() {
     const { tour_name, description, destinations, age_from, age_to, country, tour_operator } = this.props;
     return (
-      <div>
+      <InfoContainer>
         <h1>{ tour_name }</h1>
         <p>{ description }</p>
         <table>
@@ -35,7 +60,7 @@ class TourInfo extends Component {
             </tr>
           </tbody>
         </table>
-      </div>
+      </InfoContainer>
     );
   }
 }

@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 import TourPhotos from './TourPhotos';
 import TourInfo from './TourInfo';
 import TourSidebar from './TourSidebar';
+
+const TourItem = styled.article`
+  min-height: 246px;
+  padding: 1px 1px 17px;
+  margin-bottom: 28px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+`;
 
 class Tour extends Component {
   render() {
@@ -13,11 +26,11 @@ class Tour extends Component {
     } = this.props.tour;
 
     return (
-      <article>
+      <TourItem>
         <TourPhotos {...{tour_image, map_image}} />
         <TourInfo {...{tour_name, description, destinations, age_from, age_to, country, tour_operator}} />
         <TourSidebar {...{currency, saving, price, length}} />
-      </article>
+      </TourItem>
     );
   }
 }

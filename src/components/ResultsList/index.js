@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Tour from '../Tour';
+
+const TourList = styled.section`
+  background-color: rgb(235, 238, 242);
+  color: #2c3e50;
+  padding: 20px 10px;
+  font-size: 14px;
+  font-family: Helvetica,Arial,FreeSans,sans-serif;
+`;
 
 class ResultsList extends Component {
   constructor(props) {
@@ -9,6 +18,7 @@ class ResultsList extends Component {
       results: null
     }
   }
+
   componentDidMount() {
     const { results } = this.state;
     if (results === null) {
@@ -33,11 +43,11 @@ class ResultsList extends Component {
     const { results } = this.state;
     if (results === null) return null;
     return (
-      <section>
+      <TourList>
         {results.map(result => {
           return <Tour key={result.id} tour={result} />;
         })}
-      </section>
+      </TourList>
     )
   }
 }
