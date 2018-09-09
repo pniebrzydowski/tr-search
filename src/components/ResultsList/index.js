@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Tour from '../Tour';
-import LoadingIndicator from '../modules/LodingIndicator';
 
 const TourList = styled.section`
   display: grid;
@@ -18,9 +17,7 @@ const TourList = styled.section`
 class ResultsList extends Component {
   render() {
     const { results } = this.props;
-    if (results === null) {
-      return <LoadingIndicator />
-    };
+    if (results === null) return null;
     return (
       <TourList>
         {results.map(result => {

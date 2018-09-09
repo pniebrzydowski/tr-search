@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ResultsList from './components/ResultsList';
 import { SORT_OPTIONS } from './helpers/constants';
 import SelectInput from './components/modules/SelectInput';
+import LoadingIndicator from './components/modules/LoadingIndicator';
 
 const StyledApp = styled.section`
   padding: 20px 10px;
@@ -73,6 +74,7 @@ class App extends Component {
     const results = this.getSortedResults();
     return (
       <StyledApp>
+        {results === null && <LoadingIndicator />}
         <StyledHeader>
           <label htmlFor="results-sort">Sort by</label>
           <SelectInput disabled={results === null} options={SORT_OPTIONS} onChange={this.setSort} id="results-sort" />
