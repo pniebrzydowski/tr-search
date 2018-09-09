@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
-import './App.css';
+import styled from 'styled-components';
 import ResultsList from './components/ResultsList';
+import { SORT_OPTIONS } from './helpers/constants';
+import SelectInput from './components/modules/SelectInput';
+
+const StyledApp = styled.section`
+  padding: 20px 10px;
+`;
+
+const StyledHeader = styled.header`
+  padding-bottom: 20px;
+  text-align: right;
+
+  label {
+    font-weight: bold;
+    color: #818d99;
+    margin-right: 14px;
+  }
+`;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       fetching: false,
-      results: null
+      results: null,
+      sortedBy: {
+        column: 'price',
+        order: 'asc',
+      }
     }
+    this.setSort = this.setSort.bind(this);
   }
 
   componentDidMount() {
@@ -30,12 +52,33 @@ class App extends Component {
     });
   }
 
+  setSort(sortedBy) {
+    console.log(sortedBy);
+    this.setState({ sortedBy });
+  }
+
+  getSortedResults() {
+    const { sortedBy, results } = this.state;
+    if (results === null) return null;
+    const sortedResults = results.sort((a, b) => {
+      if (sortedBy.order === 'asc') {
+        return a[sortedBy.column] - b[sortedBy.column];
+      }
+      return b[sortedBy.column] - a[sortedBy.column];
+    });
+    return sortedResults;
+  }
+
   render() {
-    const { results } = this.state;
+    const results = this.getSortedResults();
     return (
-      <div>
+      <StyledApp>
+        <StyledHeader>
+          <label htmlFor="results-sort">Sort by</label>
+          <SelectInput disabled={results === null} options={SORT_OPTIONS} onChange={this.setSort} id="results-sort" />
+        </StyledHeader>
         <ResultsList results={results} />
-      </div>
+      </StyledApp>
     )
   }
 }

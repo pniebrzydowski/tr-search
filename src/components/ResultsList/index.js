@@ -4,12 +4,6 @@ import styled from 'styled-components';
 import Tour from '../Tour';
 
 const TourList = styled.section`
-  background-color: rgb(235, 238, 242);
-  color: #2c3e50;
-  padding: 20px 10px;
-  font-size: 14px;
-  font-family: Helvetica,Arial,FreeSans,sans-serif;
-
   display: grid;
   grid-gap: 10px;
   @media(min-width: 568px) and (max-width: 767px) {
