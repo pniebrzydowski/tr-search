@@ -19,6 +19,10 @@ const PhotosContainer = styled.div`
   img {
     width: 100%;
     height: auto;
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
   }
 `;
 
@@ -27,8 +31,8 @@ class TourPhotos extends PureComponent {
     const { tour_image, map_image } = this.props;
     return (
       <PhotosContainer>
-        <LazyLoadImage src={tour_image} alt="Tour" />
-        <LazyLoadImage src={map_image} alt="Tour Map" />
+        <img src={tour_image} alt="Tour" />
+        <img src={map_image} alt="Tour Map" />
       </PhotosContainer>
     );
   }

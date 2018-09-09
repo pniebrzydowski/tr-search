@@ -26,7 +26,7 @@ class Currency extends PureComponent {
 
     const currencySymbol = CURRENCY_MAP[currency];
     return (
-      <CurrencyContainer {...primary}>
+      <CurrencyContainer primary={primary}>
         <label>{label}</label>
         <span>{primary && currencySymbol === '$' && <span>{currency.substr(0,2)}</span>}{currencySymbol} {amount}</span>
       </CurrencyContainer>

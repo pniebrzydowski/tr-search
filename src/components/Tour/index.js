@@ -8,7 +8,7 @@ import TourSidebar from './TourSidebar';
 
 const TourItem = styled.article`
   min-height: 246px;
-  padding: 1px 1px 17px;
+  padding: 1px;
   background: #fff;
   position: relative;
 

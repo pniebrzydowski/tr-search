@@ -5,7 +5,12 @@ import Currency from '../modules/Currency';
 
 const SidebarContainer = styled.div`
   padding: 20px;
+  @media(min-width: 450px) and (max-width: 567px) {
+    display: flex;
+    justify-content: space-between;
+  }
   @media(min-width: 768px) {
+    display: block;
     width: 25%;
     flex: 0 0 25%;
   }
@@ -14,6 +19,9 @@ const SidebarContainer = styled.div`
 const PriceInfo = styled.div`
   display: flex;
   justify-content: space-between;
+  @media(min-width: 450px) and (max-width: 567px) {
+    flex: 0 0 50%;
+  }
 
   & > :first-child {
     text-align: left;
@@ -32,6 +40,10 @@ const Duration = styled.div`
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
+
+  @media(min-width: 450px) and (max-width: 567px) {
+    border: 0;
+  }
 `;
 
 class TourSidebar extends PureComponent {
