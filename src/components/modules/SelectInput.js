@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { COLORS } from '../../helpers/constants';
 
 const StyledSelect = styled.select`
-  border: 1px solid #c7d0d9;
+  border: 1px solid ${COLORS.light};
   height: 43px;
   line-height: 41px;
   padding: 0 30px 0 15px;

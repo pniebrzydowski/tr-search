@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { COLORS } from '../../helpers/constants';
 
 const InfoContainer = styled.div`
   padding: 20px;
@@ -23,7 +24,7 @@ const InfoContainer = styled.div`
     font-size: 10px;
     font-weight: normal;
     text-transform: uppercase;
-    color: #818d99;
+    color: ${COLORS.secondary};
     width: 100px; 
   }
   td {

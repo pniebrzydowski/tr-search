@@ -4,6 +4,7 @@ import ResultsList from './components/ResultsList';
 import { SORT_OPTIONS } from './helpers/constants';
 import SelectInput from './components/modules/SelectInput';
 import LoadingIndicator from './components/modules/LoadingIndicator';
+import { COLORS } from './helpers/constants';
 
 const StyledApp = styled.section`
   padding: 20px 10px;
@@ -15,7 +16,7 @@ const StyledHeader = styled.header`
 
   label {
     font-weight: bold;
-    color: #818d99;
+    color: ${COLORS.secondary};
     margin-right: 14px;
   }
 `;

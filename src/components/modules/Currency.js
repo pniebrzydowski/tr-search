@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { CURRENCY_MAP } from '../../helpers/currency';
+import { COLORS } from '../../helpers/constants';
 
 const CurrencyContainer = styled.div`
   span {
@@ -14,7 +15,7 @@ const CurrencyContainer = styled.div`
       display: inline-block;
       font-size: 11px;
       font-weight: normal;
-      color: #818d99;
+      color: ${COLORS.secondary};
       margin-right: 5px;
     }
   }

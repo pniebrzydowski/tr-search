@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
+import { BREAKPOINTS } from '../../helpers/constants';
 
 const PhotosContainer = styled.div`
   position: relative;
@@ -10,7 +11,7 @@ const PhotosContainer = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  @media(min-width: 768px) {
+  @media(min-width: ${BREAKPOINTS.lgMin}px) {
     width: 232px;
     flex: 0 0 232px;
     height: 100%;  

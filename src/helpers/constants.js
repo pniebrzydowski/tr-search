@@ -27,4 +27,18 @@ export const SORT_OPTIONS = [
     },
     label: 'Shortest tour first'
   },
-]; 
+];
+
+export const BREAKPOINTS = {
+  smallMin: 450,
+  smallMax: 567,
+  medMin: 568,
+  medMax: 767,
+  lgMin: 768
+}
+
+export const COLORS = {
+  primary: '#2c3e50',
+  secondary: '#818d99',
+  light: '#c7d0d9',
+}

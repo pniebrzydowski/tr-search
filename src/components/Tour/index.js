@@ -5,14 +5,15 @@ import styled from 'styled-components';
 import TourPhotos from './TourPhotos';
 import TourInfo from './TourInfo';
 import TourSidebar from './TourSidebar';
+import { BREAKPOINTS } from '../../helpers/constants';
 
 const TourItem = styled.article`
   min-height: 246px;
   padding: 1px;
-  background: #fff;
+  background: white;
   position: relative;
 
-  @media(min-width: 768px) {
+  @media(min-width: ${BREAKPOINTS.lgMin}px) {
     display: flex;
     justify-content: space-between;
     flex: 1 1 auto;  
