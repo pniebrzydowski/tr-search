@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Currency from '../modules/Currency';
 
 const SidebarContainer = styled.div`
   width: 25%;
@@ -11,14 +12,23 @@ const SidebarContainer = styled.div`
 const PriceInfo = styled.div`
   display: flex;
   justify-content: space-between;
+
+  & > :first-child {
+    text-align: left;
+  }
+  & > :last-child {
+    text-align: right;
+  }
 `;
 
 const Duration = styled.div`
   margin-top: 10px;
   padding: 10px 0;
   border-top: 1px solid #c7d0d9;
+  border-bottom: 1px solid #c7d0d9;
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   line-height: 1;
 `;
 
@@ -28,14 +38,8 @@ class TourSidebar extends Component {
     return (
       <SidebarContainer>
         <PriceInfo>
-          <div className="price-savings">
-            <label>Our saving</label>
-            <span>{currency} {saving}</span>
-          </div>
-          <div className="price-listing">
-            <label>From</label>
-            <span>{currency} {price}</span>
-          </div>
+          <Currency label="Our saving" currency={currency} amount={saving} />
+          <Currency label="From" currency={currency} amount={price} />
         </PriceInfo>
         <Duration>
           { length } days
