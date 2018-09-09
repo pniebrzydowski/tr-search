@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TourInfo from '../TourInfo';
+import Tour from '../Tour';
 
 class ResultsList extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class ResultsList extends Component {
     return (
       <section>
         {results.map(result => {
-          return <TourInfo key={result.id} tour={result} />;
+          return <Tour key={result.id} tour={result} />;
         })}
       </section>
     )
