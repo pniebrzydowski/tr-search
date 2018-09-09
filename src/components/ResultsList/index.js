@@ -32,7 +32,6 @@ class ResultsList extends Component {
     });
     const response = await fetch('https://api.myjson.com/bins/18x6yt')
     const json = await response.json();
-    console.log(json);
     this.setState({
       fetching: false,
       results: json

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const PhotosContainer = styled.div`
   width: 232px;
@@ -22,8 +23,8 @@ class TourPhotos extends Component {
     const { tour_image, map_image } = this.props;
     return (
       <PhotosContainer>
-        <img src={tour_image} alt="Tour" />
-        <img src={map_image} alt="Tour Map" />
+        <LazyLoadImage src={tour_image} alt="Tour" />
+        <LazyLoadImage src={map_image} alt="Tour Map" />
       </PhotosContainer>
     );
   }
