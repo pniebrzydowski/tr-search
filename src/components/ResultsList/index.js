@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Tour from '../Tour';
+import LoadingIndicator from '../modules/LodingIndicator';
 
 const TourList = styled.section`
   display: grid;
@@ -14,22 +15,11 @@ const TourList = styled.section`
   }
 `;
 
-const LoadingMessage = styled.div`
-  background-image: url(/images/tr-loader-small.gif);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-`;
-
 class ResultsList extends Component {
   render() {
     const { results } = this.props;
     if (results === null) {
-      return <LoadingMessage />
+      return <LoadingIndicator />
     };
     return (
       <TourList>
