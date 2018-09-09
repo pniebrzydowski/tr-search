@@ -20,6 +20,7 @@ const PhotosContainer = styled.div`
   img {
     width: 100%;
     height: auto;
+    min-height: 1px;
 
     &:first-child {
       margin-bottom: 5px;

@@ -12,6 +12,12 @@ const TourItem = styled.article`
   padding: 1px;
   background: white;
   position: relative;
+  margin-bottom: 5px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    margin-bottom: 28px;
+  }
 
   @media(min-width: ${BREAKPOINTS.lgMin}px) {
     display: flex;

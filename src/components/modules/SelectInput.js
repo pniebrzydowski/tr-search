@@ -15,6 +15,10 @@ const StyledSelect = styled.select`
   background-position-y: center;
   max-width: 150px;
   appearance: none;
+  
+  &::-ms-expand {
+    display: none;
+  }
 `;
 
 class SelectInput extends PureComponent {
