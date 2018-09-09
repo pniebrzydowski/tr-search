@@ -16,15 +16,18 @@ const InfoContainer = styled.div`
     margin-top: 12px;
   }
   th, td {
-    font-size: 10px;
     text-align: left;
     vertical-align: top;
   }
   th {
+    font-size: 10px;
     font-weight: normal;
     text-transform: uppercase;
     color: #818d99;
     width: 100px; 
+  }
+  td {
+    font-size: 12px;
   }
 `;
 
