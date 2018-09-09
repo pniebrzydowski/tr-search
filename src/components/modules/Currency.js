@@ -6,7 +6,7 @@ import { CURRENCY_MAP } from '../../helpers/currency';
 const CurrencyContainer = styled.div`
   span {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: ${props => props.primary ? 'bold' : 'normal'};
     display: block;
     padding: 4px 0;
 
@@ -26,7 +26,7 @@ class Currency extends PureComponent {
 
     const currencySymbol = CURRENCY_MAP[currency];
     return (
-      <CurrencyContainer>
+      <CurrencyContainer {...primary}>
         <label>{label}</label>
         <span>{primary && currencySymbol === '$' && <span>{currency.substr(0,2)}</span>}{currencySymbol} {amount}</span>
       </CurrencyContainer>

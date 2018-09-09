@@ -9,12 +9,14 @@ import TourSidebar from './TourSidebar';
 const TourItem = styled.article`
   min-height: 246px;
   padding: 1px 1px 17px;
-  margin-bottom: 28px;
   background: #fff;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex: 1 1 auto;
+
+  @media(min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;  
+  }
 `;
 
 class Tour extends Component {

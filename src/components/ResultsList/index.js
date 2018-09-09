@@ -9,6 +9,15 @@ const TourList = styled.section`
   padding: 20px 10px;
   font-size: 14px;
   font-family: Helvetica,Arial,FreeSans,sans-serif;
+
+  display: grid;
+  grid-gap: 10px;
+  @media(min-width: 568px) and (max-width: 767px) {
+      grid-template-columns: 1fr 1fr;
+  }
+  @media(min-width: 768px) {
+    grid-gap: 28px;
+  }
 `;
 
 class ResultsList extends Component {

@@ -4,9 +4,11 @@ import styled from 'styled-components';
 import Currency from '../modules/Currency';
 
 const SidebarContainer = styled.div`
-  width: 25%;
-  flex: 0 0 25%;
   padding: 20px;
+  @media(min-width: 768px) {
+    width: 25%;
+    flex: 0 0 25%;
+  }
 `;
 
 const PriceInfo = styled.div`
