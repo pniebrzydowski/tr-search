@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import LazyLoad from 'react-lazyload';
 
 const PhotosContainer = styled.div`
   position: relative;
@@ -31,8 +31,12 @@ class TourPhotos extends PureComponent {
     const { tour_image, map_image } = this.props;
     return (
       <PhotosContainer>
-        <img src={tour_image} alt="Tour" />
-        <img src={map_image} alt="Tour Map" />
+        <LazyLoad>
+          <img src={tour_image} alt="Tour" />
+        </LazyLoad>
+        <LazyLoad>
+          <img src={map_image} alt="Tour Map" />
+        </LazyLoad>
       </PhotosContainer>
     );
   }
