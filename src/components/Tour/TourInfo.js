@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -31,7 +31,7 @@ const InfoContainer = styled.div`
   }
 `;
 
-class TourInfo extends Component {
+class TourInfo extends PureComponent {
   render() {
     const { tour_name, description, destinations, age_from, age_to, country, tour_operator } = this.props;
     return (
