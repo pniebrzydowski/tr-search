@@ -39,7 +39,7 @@ class TourSidebar extends Component {
       <SidebarContainer>
         <PriceInfo>
           <Currency label="Our saving" currency={currency} amount={saving} />
-          <Currency label="From" currency={currency} amount={price} />
+          <Currency label="From" currency={currency} amount={price} primary />
         </PriceInfo>
         <Duration>
           { length } days
