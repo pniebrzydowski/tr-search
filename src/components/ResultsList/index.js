@@ -14,10 +14,23 @@ const TourList = styled.section`
   }
 `;
 
+const LoadingMessage = styled.div`
+  background-image: url(/images/tr-loader-small.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+`;
+
 class ResultsList extends Component {
   render() {
     const { results } = this.props;
-    if (results === null) return null;
+    if (results === null) {
+      return <LoadingMessage />
+    };
     return (
       <TourList>
         {results.map(result => {
