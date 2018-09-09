@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const PhotosContainer = styled.div`
-  width: 232px;
-  flex: 0 0 232px;
-  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+
+  @media(min-width: 768px) {
+    width: 232px;
+    flex: 0 0 232px;
+    height: 100%;  
+  }
 
   img {
     width: 100%;
