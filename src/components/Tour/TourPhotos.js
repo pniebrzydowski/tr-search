@@ -7,6 +7,14 @@ const PhotosContainer = styled.div`
   flex: 0 0 232px;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 class TourPhotos extends Component {

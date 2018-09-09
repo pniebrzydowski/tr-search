@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const InfoContainer = styled.div`
   padding: 20px;
+  flex: 1 1 auto;
 
   h1 {
     margin-top: 0;
@@ -17,6 +18,7 @@ const InfoContainer = styled.div`
   th, td {
     font-size: 10px;
     text-align: left;
+    vertical-align: top;
   }
   th {
     font-weight: normal;
