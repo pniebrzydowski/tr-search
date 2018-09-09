@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const LoadingIndicator = styled.select`
+const LoadingIndicator = styled.div`
   background-color: rgba(255, 255, 255, 0.3);
   background-image: url(/images/tr-loader-small.gif);
   background-repeat: no-repeat;
